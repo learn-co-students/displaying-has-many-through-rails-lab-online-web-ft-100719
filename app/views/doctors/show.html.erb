@@ -1,7 +1,7 @@
-<h2><%= @doctor.name %>
+<h2><%= @doctor.name %> <br>
 <%= @doctor.department %> </h2>
 
-<% @doctor.appointments.each do |appt| %>
-    <%= link_to appt.patient.name, patient_path(appt.patient) %>
-    <%= appt.appointment_datetime %>
-    <% end %> 
+<% @doctor.appointments.each do |a| %> 
+    <%= a.appointment_datetime.to_s[:long] %>
+<% end %>
+
