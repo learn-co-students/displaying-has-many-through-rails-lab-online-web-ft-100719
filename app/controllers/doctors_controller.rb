@@ -9,6 +9,8 @@ class DoctorsController < ApplicationController
 
     def new
         @doctor = Doctor.new
+        @doctor.appointment.build
+        @doctor.appointment.build
     end 
 
     def create
