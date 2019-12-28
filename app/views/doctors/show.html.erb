@@ -1,0 +1,7 @@
+<h2><%= @doctor.name %> <br>
+<%= @doctor.department %> </h2>
+
+<% @doctor.appointments.each do |a| %> 
+    <%= a.appointment_datetime.to_s[:long] %>
+<% end %>
+

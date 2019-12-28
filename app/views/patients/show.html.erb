@@ -1,0 +1,6 @@
+<h2><%= @patient.name %> </h2><br><br>
+
+<% @patient.appointments.each do |a| %>
+    You have an appointment with Doctor <%= link_to a.doctor.name, doctor_path(a.doctor) %><br>
+    Scheduled at this time: <%= a.appointment_datetime.to_s(:long) %><br><br><br>
+<% end %> 
