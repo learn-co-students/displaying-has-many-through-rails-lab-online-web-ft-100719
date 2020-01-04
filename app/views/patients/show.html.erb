@@ -2,8 +2,9 @@
 <p>
   Age: <%= @patient.age %>
 </p>
-Appointments:
+Appointments: <br>
   <% @patient.appointments.each do |appointment| %>
     <%= link_to appointment.doctor.name, doctor_path(appointment.doctor) %> at
     <%= appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M ") %>
+    <br>
   <% end %>
