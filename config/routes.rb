@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :patients
   resources :appointments, only: [:show]
 end
-end
+
 
